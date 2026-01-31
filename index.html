@@ -11,5 +11,41 @@
 
 <body>
 
+  <h1>Bear Ninja Hunter</h1>
+
+  <p id="gameResults">Game results will appear here.</p>
+
+  <script>
+    // Prompt the player for their name
+    let playerName = prompt("To continue, please enter your name:");
+
+    // Alert a personalized greeting
+    alert("Welcome to Bear Ninja Hunter, " + playerName + "!");
+
+    // Prompt the player's game choice
+    let playerChoice = prompt("Please choose Bear, Ninja, or Hunter:");
+
+    // Hard-coded computer choice for this prototype
+    const computerChoice = "Bear";
+
+    // Create a message for the console using concatenation
+    let consoleMessage =
+      "Player Name: " + playerName +
+      " | Player Choice: " + playerChoice +
+      " | Computer Choice: " + computerChoice;
+
+    // Create a message for the web page using template literals
+    let pageMessage =
+      `Welcome ${playerName}!<br>
+       You chose ${playerChoice}.<br>
+       The computer chose ${computerChoice}.`;
+
+    // Output to the console
+    console.log(consoleMessage);
+
+    // Output to the HTML page
+    document.getElementById("gameResults").innerHTML = pageMessage;
+  </script>
+
 </body>
 </html>
